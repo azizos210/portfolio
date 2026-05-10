@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Étudiant ESPRIT</title>
+  <meta name="description" content="Portfolio professionnel d'un étudiant ingénieur ESPRIT — Développeur Full Stack passionné par la technologie." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== LOADER ===== -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-inner">
+      <img src="image/esprit.png"
+           alt="ESPRIT" class="loader-logo" />
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <span class="loader-text">Chargement...</span>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="image/esprit.png"
+             alt="ESPRIT Logo" class="esprit-logo" />
+        <span class="nav-name">Portfolio<span class="nav-dot">.</span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" data-nav="hero">Accueil</a></li>
+        <li><a href="#about" data-nav="about">À propos</a></li>
+        <li><a href="#skills" data-nav="skills">Skills</a></li>
+        <li><a href="#projects" data-nav="projects">Projets</a></li>
+        <li><a href="projet/index.html" target="_blank" style="color:var(--red)"><i class="fas fa-folder-open" style="font-size:.8rem"></i> Tous les projets</a></li>
+        <li><a href="#contact" data-nav="contact">Contact</a></li>
+        <li><a href="#qrcode" class="btn-qr"><i class="fas fa-qrcode"></i> QR Code</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <!-- Animated canvas particles -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <!-- Neon grid overlay -->
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <img src="image/esprit.png"
+             alt="ESPRIT" class="badge-logo" />
+        <span>ESPRIT — École Supérieure Privée d'Ingénierie et de Technologie</span>
+        <span class="badge-dot"></span>
+      </div>
+
+      <div class="hero-greeting">Bonjour, je suis 👋</div>
+
+      <h1 class="hero-title">
+        <span class="hero-name glitch" data-text="Mouhamed-Aziz Mhamdi">Mouhamed-Aziz Mhamdi</span>
+      </h1>
+
+      <div class="hero-role-wrapper">
+        <span class="role-prefix">&lt;</span>
+        <span class="hero-role" id="typedRole">Ingenieur Polyvalent</span>
+        <span class="role-cursor">|</span>
+        <span class="role-suffix">/&gt;</span>
+      </div>
+
+      <p class="hero-desc">
+        Passionné par la technologie, je conçois des solutions innovantes et des expériences numériques de qualité.
+        Étudiant ingénieur à <strong>ESPRIT</strong>, Tunis.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> Voir mes projets
+          <span class="btn-glow"></span>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Me contacter
+        </a>
+        <a href="mon_cv (1).pdf" download class="btn btn-ghost">
+          <i class="fas fa-file-pdf"></i> CV
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/azizos210" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter" class="social-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/aziz.mhamdi.3745/" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="mailto:azizmhamdi2030@gmail.com" aria-label="Email" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <div class="hero-email-bar">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:azizmhamdi2030@gmail.com">azizmhamdi2030@gmail.com</a>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <span>Défiler</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-scene">
+        <!-- Orbiting rings -->
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+        <div class="orbit orbit-3"></div>
+
+        <!-- Profile photo -->
+        <div class="avatar-frame">
+          <div class="avatar-glow"></div>
+          <img src="image/584622665_1367406038111748_8021135782824956619_n.jpg"
+               alt="Photo de profil"
+               class="avatar-photo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="avatar-fallback" style="display:none;">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+        </div>
+
+        <!-- Floating tech badges -->
+        <div class="tech-badge tb-react"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="tech-badge tb-node"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+        <div class="tech-badge tb-python"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="tech-badge tb-docker"><i class="fab fa-docker"></i><span>Docker</span></div>
+
+        <!-- Status badge -->
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Disponible pour stage
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-user"></i> À propos</span>
+        <h2 class="section-title">Qui suis-je ?</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="about-photo-wrap">
+            <img src="image/584622665_1367406038111748_8021135782824956619_n.jpg"
+                 alt="Photo de profil"
+                 class="about-photo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="about-photo-fallback" style="display:none;">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="about-photo-border"></div>
+          </div>
+          <div class="esprit-badge-card">
+            <img src="image/esprit.png"
+                 alt="ESPRIT" />
+            <div>
+              <strong>ESPRIT</strong>
+              <span>Cycle Ingénieur · Informatique</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right reveal-right">
+          <h3 class="about-subtitle">Étudiant Ingénieur passionné</h3>
+          <p>
+            Je suis étudiant en ingénierie informatique à <strong>ESPRIT</strong>, l'une des meilleures écoles d'ingénierie privées de Tunisie.
+            Ma passion pour le développement logiciel m'a conduit à maîtriser plusieurs technologies modernes du web et du mobile.
+          </p>
+          <p>
+            Je m'intéresse particulièrement à la <strong>Sécurité Réseaux</strong>, à l'<strong>intelligence artificielle</strong>
+            et aux architectures <strong>cloud</strong>. J'aime relever des défis techniques et créer des solutions qui ont un impact réel.
+          </p>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div><strong>Formation</strong><span>Cycle Ingénieur — Informatique</span></div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-calendar-alt"></i>
+              <div><strong>Promotion</strong><span>2022 – 2025</span></div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div><strong>Localisation</strong><span>Ariana, Tunisie</span></div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-language"></i>
+              <div><strong>Langues</strong><span>Arabe · Français · Anglais</span></div>
+            </div>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-plus">+</span>
+              <span class="stat-label">Projets</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-plus">+</span>
+              <span class="stat-label">Années</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="15">0</span>
+              <span class="stat-plus">+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-plus"></span>
+              <span class="stat-label">Stages</span>
+            </div>
+          </div>
+
+          <a href="mon_cv (1).pdf" download class="btn btn-primary">
+            <i class="fas fa-download"></i> Télécharger mon CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-code"></i> Compétences</span>
+        <h2 class="section-title">Mon Stack Technique</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="skills-tabs">
+        <button class="stab active" data-tab="frontend"><i class="fas fa-laptop-code"></i> Frontend</button>
+        <button class="stab" data-tab="backend"><i class="fas fa-server"></i> Backend</button>
+        <button class="stab" data-tab="database"><i class="fas fa-database"></i> Base de données</button>
+        <button class="stab" data-tab="tools"><i class="fas fa-tools"></i> Outils</button>
+      </div>
+
+      <div class="skills-panel active" id="tab-frontend">
+        <div class="skill-items">
+          <div class="skill-item reveal-up" style="--d:0.0s">
+            <div class="skill-icon si-html"><i class="fab fa-html5"></i></div>
+            <span>HTML5</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="95"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.1s">
+            <div class="skill-icon si-css"><i class="fab fa-css3-alt"></i></div>
+            <span>CSS3 / SASS</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.2s">
+            <div class="skill-icon si-js"><i class="fab fa-js"></i></div>
+            <span>JavaScript</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.3s">
+            <div class="skill-icon si-react"><i class="fab fa-react"></i></div>
+            <span>React.js</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.4s">
+            <div class="skill-icon si-angular"><i class="fab fa-angular"></i></div>
+            <span>Angular</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.5s">
+            <div class="skill-icon si-ts"><i class="fas fa-code"></i></div>
+            <span>TypeScript</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-backend">
+        <div class="skill-items">
+          <div class="skill-item reveal-up" style="--d:0.0s">
+            <div class="skill-icon si-node"><i class="fab fa-node-js"></i></div>
+            <span>Node.js</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="82"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.1s">
+            <div class="skill-icon si-python"><i class="fab fa-python"></i></div>
+            <span>Python</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.2s">
+            <div class="skill-icon si-java"><i class="fab fa-java"></i></div>
+            <span>Spring Boot</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.3s">
+            <div class="skill-icon si-php"><i class="fab fa-php"></i></div>
+            <span>PHP / Laravel</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="72"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.4s">
+            <div class="skill-icon si-api"><i class="fas fa-plug"></i></div>
+            <span>REST API</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="88"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.5s">
+            <div class="skill-icon si-gql"><i class="fas fa-project-diagram"></i></div>
+            <span>GraphQL</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="65"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-database">
+        <div class="skill-items">
+          <div class="skill-item reveal-up" style="--d:0.0s">
+            <div class="skill-icon si-mysql"><i class="fas fa-database"></i></div>
+            <span>MySQL</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.1s">
+            <div class="skill-icon si-mongo"><i class="fas fa-leaf"></i></div>
+            <span>MongoDB</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="80"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.2s">
+            <div class="skill-icon si-pg"><i class="fas fa-elephant"></i></div>
+            <span>PostgreSQL</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="72"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.3s">
+            <div class="skill-icon si-firebase"><i class="fas fa-fire"></i></div>
+            <span>Firebase</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="78"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-tools">
+        <div class="skill-items">
+          <div class="skill-item reveal-up" style="--d:0.0s">
+            <div class="skill-icon si-git"><i class="fab fa-git-alt"></i></div>
+            <span>Git / GitHub</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="90"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.1s">
+            <div class="skill-icon si-docker"><i class="fab fa-docker"></i></div>
+            <span>Docker</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="70"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.2s">
+            <div class="skill-icon si-linux"><i class="fab fa-linux"></i></div>
+            <span>Linux</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="75"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.3s">
+            <div class="skill-icon si-figma"><i class="fab fa-figma"></i></div>
+            <span>Figma</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="68"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.4s">
+            <div class="skill-icon si-postman"><i class="fas fa-paper-plane"></i></div>
+            <span>Postman</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="85"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:0.5s">
+            <div class="skill-icon si-jira"><i class="fab fa-jira"></i></div>
+            <span>Jira / Agile</span>
+            <div class="skill-bar"><div class="skill-fill" data-w="72"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-folder-open"></i> Projets</span>
+        <h2 class="section-title">Mes Réalisations</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fas fa-th"></i> Tous
+        </button>
+        <button class="filter-btn" data-filter="web">
+          <i class="fas fa-globe"></i> Web
+        </button>
+        <button class="filter-btn" data-filter="ai">
+          <i class="fas fa-brain"></i> IA / Desktop
+        </button>
+        <button class="filter-btn" data-filter="reseau">
+          <i class="fas fa-network-wired"></i> Réseau
+        </button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- ===== PROJET 1 : JavaFX + IA ===== -->
+        <div class="project-card reveal-up" data-category="ai" style="--d:0s">
+          <div class="project-img">
+            <img src="image/java.jpg" alt="StudyFlow Desktop IA" class="project-real-img" />
+            <div class="project-placeholder" style="--c1:#f89820;--c2:#b85c00;display:none">
+              <i class="fab fa-java"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/azizos210" target="_blank" class="pov-btn"><i class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="project-category-badge">IA · Desktop</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag" style="background:rgba(248,152,32,.12);color:#f89820;border:1px solid rgba(248,152,32,.25)">Java 17</span>
+              <span class="ptag" style="background:rgba(97,218,251,.12);color:#61dafb;border:1px solid rgba(97,218,251,.25)">JavaFX</span>
+              <span class="ptag ptag-python">Python</span>
+              <span class="ptag" style="background:rgba(0,117,143,.12);color:#00758f;border:1px solid rgba(0,117,143,.25)">MySQL</span>
+              <span class="ptag" style="background:rgba(255,160,0,.12);color:#ffa000;border:1px solid rgba(255,160,0,.25)">ML</span>
+            </div>
+            <h3>StudyFlow — Application Desktop IA</h3>
+            <p>Application JavaFX complète avec détection de stress par vision (OpenCV), reconnaissance faciale, bot WhatsApp IA (Groq LLaMA), paiement Stripe, génération QR code et modèles ML (RandomForest, 88% accuracy).</p>
+            <div class="project-footer">
+              <a href="https://github.com/azizos210" target="_blank" class="pf-link"><i class="fab fa-github"></i> GitHub</a>
+              <span style="margin-left:auto;font-size:.72rem;color:#22c55e;display:flex;align-items:center;gap:5px">
+                <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block"></span> PIDEV 3A36
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PROJET 2 : Symfony Web ===== -->
+        <div class="project-card reveal-up" data-category="web" style="--d:0.15s">
+          <div class="project-img">
+            <img src="image/symfony.jpg" alt="Studyflow Web Symfony" class="project-real-img" />
+            <div class="project-placeholder" style="--c1:#1a7f37;--c2:#0d4a20;display:none">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/ihebayari123/StudyFlow" target="_blank" class="pov-btn"><i class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="project-category-badge">Web · IA</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag" style="background:rgba(0,0,0,.3);color:#fff;border:1px solid rgba(255,255,255,.15)">Symfony</span>
+              <span class="ptag" style="background:rgba(119,123,180,.12);color:#777bb4;border:1px solid rgba(119,123,180,.25)">PHP</span>
+              <span class="ptag ptag-mysql">MySQL</span>
+              <span class="ptag ptag-python">Python</span>
+              <span class="ptag" style="background:rgba(255,160,0,.12);color:#ffa000;border:1px solid rgba(255,160,0,.25)">Keras</span>
+            </div>
+            <h3>Studyflow — Gestion du Stress Étudiant</h3>
+            <p>Application web Symfony MVC pour aider les étudiants à gérer leur stress : suivi de tâches, quiz IA, prédiction bien-être (Keras), chatbot, paiement Stripe, notifications WhatsApp et dashboard analytique.</p>
+            <div class="project-footer">
+              <a href="https://github.com/ihebayari123/StudyFlow" target="_blank" class="pf-link"><i class="fab fa-github"></i> GitHub</a>
+              <span style="margin-left:auto;font-size:.72rem;color:#22c55e;display:flex;align-items:center;gap:5px">
+                <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block"></span> PIDEV 3A36
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== PROJET 3 : Réseau GNS3 ===== -->
+        <div class="project-card reveal-up" data-category="reseau" style="--d:0.3s">
+          <div class="project-img">
+            <img src="image/rx.png" alt="Projet Réseau GNS3" class="project-real-img" />
+            <div class="project-placeholder" style="--c1:#0077b6;--c2:#023e8a;display:none">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/azizos210" target="_blank" class="pov-btn"><i class="fab fa-github"></i> Code</a>
+            </div>
+            <div class="project-category-badge">Réseau</div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag" style="background:rgba(0,119,182,.12);color:#0077b6;border:1px solid rgba(0,119,182,.25)">GNS3</span>
+              <span class="ptag" style="background:rgba(69,123,157,.12);color:#457b9d;border:1px solid rgba(69,123,157,.25)">Cisco</span>
+              <span class="ptag" style="background:rgba(230,57,70,.12);color:#e63946;border:1px solid rgba(230,57,70,.25)">VLAN</span>
+              <span class="ptag" style="background:rgba(34,197,94,.12);color:#22c55e;border:1px solid rgba(34,197,94,.25)">Routing</span>
+            </div>
+            <h3>Projet Réseau — Administration & Sécurité</h3>
+            <p>Conception et simulation d'une infrastructure réseau complète sous GNS3 : routage inter-VLAN, protocoles de routage dynamique (OSPF/RIP), sécurité réseau, configuration de switches et routeurs Cisco.</p>
+            <div class="project-footer">
+              <a href="https://github.com/azizos210" target="_blank" class="pf-link"><i class="fab fa-github"></i> GitHub</a>
+              <span style="margin-left:auto;font-size:.72rem;color:#22c55e;display:flex;align-items:center;gap:5px">
+                <span style="width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block"></span> PI Réseau
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QR CODE ===== -->
+  <section class="qrcode-section section" id="qrcode">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-qrcode"></i> QR Code</span>
+        <h2 class="section-title">Scannez mon Portfolio</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="qr-wrapper">
+        <div class="qr-card reveal-up">
+          <div class="qr-card-top">
+            <img src="image/esprit.png"
+                 alt="ESPRIT" class="qr-esprit-logo" />
+            <div class="qr-card-title">
+              <h3>Mon Portfolio</h3>
+              <p>Étudiant Ingénieur · ESPRIT</p>
+            </div>
+          </div>
+          <div class="qr-frame">
+            <div class="qr-corner qr-tl"></div>
+            <div class="qr-corner qr-tr"></div>
+            <div class="qr-corner qr-bl"></div>
+            <div class="qr-corner qr-br"></div>
+            <div class="qr-image-container">
+              <img id="qrCodeImg" src="" alt="QR Code Portfolio" class="qr-img" />
+              <div class="qr-loading" id="qrLoading">
+                <div class="qr-spinner"></div>
+                <p>Génération...</p>
+              </div>
+            </div>
+          </div>
+          <div class="qr-url-display">
+            <i class="fas fa-link"></i>
+            <span id="portfolioUrl">Chargement...</span>
+          </div>
+          <div class="qr-actions">
+            <button class="btn btn-primary" id="downloadQR">
+              <i class="fas fa-download"></i> Télécharger
+            </button>
+            <button class="btn btn-outline" id="copyUrl">
+              <i class="fas fa-copy"></i> Copier
+            </button>
+          </div>
+          <p class="qr-hint">
+            <i class="fas fa-mobile-alt"></i>
+            Scannez avec l'appareil photo de votre smartphone
+          </p>
+        </div>
+
+        <div class="qr-info reveal-right">
+          <h3>Comment utiliser le QR Code ?</h3>
+          <div class="qr-steps">
+            <div class="qr-step">
+              <div class="step-num">01</div>
+              <div class="step-text">
+                <strong>Ouvrez l'appareil photo</strong>
+                <p>Utilisez l'appareil photo natif de votre smartphone iOS ou Android</p>
+              </div>
+            </div>
+            <div class="qr-step">
+              <div class="step-num">02</div>
+              <div class="step-text">
+                <strong>Pointez vers le QR Code</strong>
+                <p>Centrez le QR code dans le viseur de votre caméra</p>
+              </div>
+            </div>
+            <div class="qr-step">
+              <div class="step-num">03</div>
+              <div class="step-text">
+                <strong>Accédez au portfolio</strong>
+                <p>Appuyez sur la notification qui apparaît pour ouvrir le portfolio</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="qr-customize">
+            <h4><i class="fas fa-sliders-h"></i> Générer un QR personnalisé</h4>
+            <div class="qr-form">
+              <input type="url" id="qrUrlInput" placeholder="https://votre-portfolio.com" />
+              <button class="btn btn-primary" id="generateQR">
+                <i class="fas fa-sync-alt"></i> Générer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+        <h2 class="section-title">Travaillons Ensemble</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left reveal-left">
+          <h3>Discutons de votre projet</h3>
+          <p>N'hésitez pas à me contacter pour toute opportunité de stage, collaboration ou projet freelance.</p>
+
+          <div class="contact-items">
+            <a href="mailto:azizmhamdi2030@gmail.com" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div class="ci-text">
+                <span>Email</span>
+                <strong>azizmhamdi2030@gmail.com</strong>
+              </div>
+              <i class="fas fa-arrow-right ci-arrow"></i>
+            </a>
+            <a href="tel:+21600000000" class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div class="ci-text">
+                <span>Téléphone</span>
+                <strong>+216 00 000 000</strong>
+              </div>
+              <i class="fas fa-arrow-right ci-arrow"></i>
+            </a>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="ci-text">
+                <span>Localisation</span>
+                <strong>Tunis, Tunisie</strong>
+              </div>
+            </div>
+            <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener" class="contact-item">
+              <div class="ci-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div class="ci-text">
+                <span>LinkedIn</span>
+                <strong>linkedin.com/in/votre-profil</strong>
+              </div>
+              <i class="fas fa-arrow-right ci-arrow"></i>
+            </a>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/azizos210" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/aziz.mhamdi.3745/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.esprit.tn" target="_blank" rel="noopener" aria-label="ESPRIT"><i class="fas fa-university"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-right" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <div class="input-wrap">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div class="input-wrap">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="azizmhamdi2030@gmail.com" required />
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <div class="input-wrap">
+              <i class="fas fa-tag"></i>
+              <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Envoyer le message
+            <span class="btn-glow"></span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <span>Message envoyé avec succès ! Je vous répondrai bientôt.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="image/esprit.png"
+                 alt="ESPRIT" class="footer-logo" />
+            <p>Étudiant Ingénieur à ESPRIT<br />Tunis, Tunisie 🇹🇳</p>
+            <div class="footer-socials">
+              <a href="https://github.com/azizos210" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.facebook.com/aziz.mhamdi.3745/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#hero"><i class="fas fa-chevron-right"></i> Accueil</a></li>
+              <li><a href="#about"><i class="fas fa-chevron-right"></i> À propos</a></li>
+              <li><a href="#skills"><i class="fas fa-chevron-right"></i> Compétences</a></li>
+              <li><a href="#projects"><i class="fas fa-chevron-right"></i> Projets</a></li>
+              <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav">
+            <h4>Liens utiles</h4>
+            <ul>
+              <li><a href="https://www.esprit.tn" target="_blank" rel="noopener"><i class="fas fa-chevron-right"></i> ESPRIT</a></li>
+              <li><a href="https://github.com/azizos210" target="_blank" rel="noopener"><i class="fas fa-chevron-right"></i> GitHub</a></li>
+              <li><a href="https://www.facebook.com/aziz.mhamdi.3745/" target="_blank" rel="noopener"><i class="fas fa-chevron-right"></i> Facebook</a></li>
+              <li><a href="https://linkedin.com/" target="_blank" rel="noopener"><i class="fas fa-chevron-right"></i> LinkedIn</a></li>
+              <li><a href="mon_cv (1).pdf" download><i class="fas fa-chevron-right"></i> Télécharger CV</a></li>
+              <li><a href="projet/index.html" target="_blank"><i class="fas fa-chevron-right"></i> Tous les projets</a></li>
+              <li><a href="#qrcode"><i class="fas fa-chevron-right"></i> QR Code</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> Portfolio — Étudiant ESPRIT.
+          Fait avec <i class="fas fa-heart"></i> en Tunisie.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
