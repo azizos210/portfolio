@@ -1,0 +1,42 @@
+2025-05-28 10:11:09,877 - INFO - Démarrage de l'application...
+2025-05-28 10:11:09,883 - INFO - Connexion MySQL: ('root@localhost', 'cancer')
+2025-05-28 10:11:09,901 - WARNING -  * Debugger is active!
+2025-05-28 10:11:09,903 - INFO -  * Debugger PIN: 261-486-064
+2025-05-28 10:11:10,294 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:11:10,299 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:11:10,757 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:11:10,762 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:11:11,286 - INFO - Démarrage de l'application...
+2025-05-28 10:11:11,297 - INFO - Connexion MySQL: ('root@localhost', 'cancer')
+2025-05-28 10:11:11,311 - WARNING -  * Debugger is active!
+2025-05-28 10:11:11,312 - INFO -  * Debugger PIN: 261-486-064
+2025-05-28 10:11:24,549 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:11:24,551 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:11:25,609 - INFO - Démarrage de l'application...
+2025-05-28 10:11:25,614 - INFO - Connexion MySQL: ('root@localhost', 'cancer')
+2025-05-28 10:11:25,628 - WARNING -  * Debugger is active!
+2025-05-28 10:11:25,630 - INFO -  * Debugger PIN: 261-486-064
+2025-05-28 10:11:30,992 - INFO - Démarrage de l'application...
+2025-05-28 10:11:30,999 - INFO - Connexion MySQL: ('root@localhost', 'cancer')
+2025-05-28 10:11:31,019 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.27:5000
+2025-05-28 10:11:31,019 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 10:11:31,026 - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-28 10:11:31,230 - INFO - Démarrage de l'application...
+2025-05-28 10:11:31,235 - INFO - Connexion MySQL: ('root@localhost', 'cancer')
+2025-05-28 10:11:31,247 - WARNING -  * Debugger is active!
+2025-05-28 10:11:31,248 - INFO -  * Debugger PIN: 261-486-064
+2025-05-28 10:11:59,834 - INFO - 127.0.0.1 - - [28/May/2025 10:11:59] "OPTIONS /api/register HTTP/1.1" 200 -
+2025-05-28 10:12:00,091 - DEBUG - Données reçues: {'nom': 'aziz', 'prenom': 'mhamdi', 'date_naissance': '2000-02-20', 'sexe': 'Homme'}
+2025-05-28 10:12:00,143 - DEBUG - Connexion DB validée
+2025-05-28 10:12:00,158 - INFO - Nouvel enregistrement créé: ID 6
+2025-05-28 10:12:00,168 - INFO - 127.0.0.1 - - [28/May/2025 10:12:00] "[35m[1mPOST /api/register HTTP/1.1[0m" 201 -
+2025-05-28 10:15:33,170 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:15:33,174 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:15:33,180 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:15:33,183 - INFO -  * Detected change in 'C:\\Users\\MSI\\Desktop\\elaa\\app.py', reloading
+2025-05-28 10:15:34,165 - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-28 10:15:35,439 - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-28 10:36:30,793 - INFO -  * Restarting with watchdog (windowsapi)
