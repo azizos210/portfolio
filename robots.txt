@@ -1,0 +1,14 @@
+# robots.txt pour Portfolio Mouhamed-Aziz Mhamdi
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://azizos210.github.io/portfolio/sitemap.xml
+
+# Disallow
+Disallow: /projet/
+Disallow: /*.pdf$
+
+# Crawl-delay
+Crawl-delay: 10
