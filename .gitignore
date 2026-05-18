@@ -1,0 +1,86 @@
+# ===== FICHIERS SENSIBLES =====
+.env
+.env.local
+.env.production
+*.env
+secrets.json
+credentials.json
+config.local.*
+*.key
+*.pem
+*.p12
+*.pfx
+*password*
+*secret*
+*token*
+*api_key*
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ===== ÉDITEURS =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ===== LOGS =====
+*.log
+app.log
+flask.log
+
+# ===== PYTHON =====
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.pkl
+*.h5
+*.model
+
+# ===== NODE =====
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ===== BUILD =====
+dist/
+build/
+target/
+*.class
+*.jar
+
+# ===== MODÈLES ML (trop lourds pour git) =====
+best_happiness_model.pkl
+best_sleep_model.pkl
+stress_model.pkl
+model.pkl
+label_encoder.pkl
+tfidf.pkl
+stress_label_encoder.pkl
+stress_scaler.pkl
+scaler.pkl
+features_list.pkl
+
+# ===== FICHIERS TEMPORAIRES =====
+qrcode_temp.png
+*.tmp
+*.temp
+
+# ===== JAVA =====
+*.class
+*.jar
+*.war
+*.ear
+/target/
+.mvn/
+
+# ===== FICHIERS DE TEST =====
+test-chat.html

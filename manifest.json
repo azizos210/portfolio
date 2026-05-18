@@ -1,0 +1,29 @@
+{
+  "name": "Portfolio - Mouhamed-Aziz Mhamdi",
+  "short_name": "Portfolio Aziz",
+  "description": "Portfolio professionnel d'un étudiant ingénieur ESPRIT - Développeur Full Stack passionné par la technologie",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "image/esprit.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "image/esprit.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "portfolio", "technology"],
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "scope": "/",
+  "screenshots": []
+}
